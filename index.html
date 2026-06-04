@@ -22,7 +22,7 @@
                             dark: '#2D2A26',
                             accent: '#8C7853',
                             accentLight: '#F3EFE6',
-                            bi: '#F2C811' // Power BI 代表色
+                            bi: '#F2C811'
                         }
                     }
                 }
@@ -31,14 +31,7 @@
     </script>
     <style>
         body { font-family: 'Noto Sans TC', sans-serif; background-color: #FDFBF7; }
-        .premium-shadow { box-shadow: 0 12px 40px -12px rgba(140, 120, 83, 0.18); }
         .premium-shadow-sm { box-shadow: 0 6px 20px -5px rgba(140, 120, 83, 0.08); }
-        .guilloche-bg {
-            background-image: radial-gradient(circle, #8c7853 0.5px, transparent 0.5px), radial-gradient(circle, #8c7853 0.5px, #fdfbf7 0.5px);
-            background-size: 8px 8px;
-            background-position: 0 0, 4px 4px;
-            opacity: 0.03;
-        }
     </style>
 </head>
 <body class="text-brand-dark min-h-screen selection:bg-brand-accent/20 selection:text-brand-accent flex flex-col">
@@ -56,76 +49,61 @@
     <section class="max-w-4xl mx-auto px-6 pt-12 pb-8 text-center">
         <h1 class="text-3xl md:text-4xl font-bold tracking-tight mt-3 mb-2 font-serif text-brand-dark">數據視覺化演練</h1>
         <p class="text-stone-500 text-xs md:text-sm max-w-xl mx-auto leading-relaxed">
-            透過 Power BI 將複雜原始數據轉化為具商業洞察的決策儀表板。以下為各類數據模型、DAX 計算與視覺化分析成果展示。
+            運用 Power BI 進行資料建模、清洗與視覺化分析，將原始數據轉化為商業決策洞察。
         </p>
-        <div class="h-[1px] w-16 bg-brand-accent/30 mx-auto mt-6"></div>
     </section>
 
     <main class="max-w-4xl mx-auto px-6 flex-grow mb-16 w-full">
-        <div class="flex flex-col gap-8">
+        <div class="grid grid-cols-1 gap-8">
             
-            <!-- 專案卡片範本 1 -->
-            <div class="bg-white rounded-2xl premium-shadow-sm border border-brand-accent/5 overflow-hidden group hover:shadow-md transition-all duration-300">
+            <!-- 專案 1 -->
+            <div class="bg-white rounded-2xl premium-shadow-sm border border-brand-accent/5 overflow-hidden group hover:shadow-lg transition-all duration-300">
                 <div class="flex flex-col md:flex-row">
-                    <!-- 左側：儀表板預覽 -->
-                    <div class="md:w-1/3 aspect-video bg-stone-100 p-4 relative flex items-center justify-center border-b md:border-b-0 md:border-r border-stone-100">
-                        <div class="guilloche-bg absolute inset-0"></div>
-                        <i class="fa-solid fa-chart-line text-brand-bi text-5xl opacity-40"></i>
-                        <span class="absolute bottom-4 text-[10px] text-stone-400 font-medium">Dashboard Preview</span>
+                    <div class="md:w-1/3 aspect-video bg-stone-100 relative flex items-center justify-center overflow-hidden">
+                        <img src="https://jkes48822789-cmyk.github.io/PowerBi/Image/PowerBi001.png" alt="零售通路銷售業績報表" class="w-full h-full object-cover">
                     </div>
-
-                    <!-- 右側：資訊 -->
                     <div class="md:w-2/3 p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-[10px] font-bold px-2.5 py-0.5 bg-brand-bi/10 text-stone-700 rounded-full">銷售分析</span>
-                            <span class="text-[11px] text-stone-400 font-mono">2026.04</span>
+                        <span class="text-[10px] font-bold px-2.5 py-0.5 bg-brand-bi/10 text-stone-700 rounded-full">專案一</span>
+                        <h3 class="font-bold text-base mt-2 mb-2">零售通路銷售業績動態報表</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed mb-4">運用 DAX 函數分析年度趨勢與 KPI 達成率，提供直覺的業績檢視視角。</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-[9px] bg-stone-50 text-stone-600 px-2 py-0.5 rounded border border-stone-100">DAX Measure</span>
+                            <span class="text-[9px] bg-stone-50 text-stone-600 px-2 py-0.5 rounded border border-stone-100">Trend Analysis</span>
                         </div>
-                        <h3 class="font-bold text-base mb-2 group-hover:text-brand-accent transition-colors">零售通路銷售業績動態報表</h3>
-                        <p class="text-xs text-stone-500 leading-relaxed mb-4">
-                            分析各據點銷售數據，運用 DAX 函數計算 YoY 年增率與 KPI 達成率，並透過互動式篩選器，讓管理者能快速切換不同產品類別與地區。
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                            <span class="text-[9px] bg-stone-50 border border-stone-100 text-stone-600 px-2 py-0.5 rounded">Data Modeling</span>
-                            <span class="text-[9px] bg-stone-50 border border-stone-100 text-stone-600 px-2 py-0.5 rounded">DAX Measure</span>
-                            <span class="text-[9px] bg-stone-50 border border-stone-100 text-stone-600 px-2 py-0.5 rounded">Interactive Filters</span>
-                        </div>
-
-                        <a href="#" class="inline-flex items-center gap-1.5 text-xs text-brand-accent font-bold hover:underline">
-                            查看互動報表 <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 專案卡片範本 2 -->
-            <div class="bg-white rounded-2xl premium-shadow-sm border border-brand-accent/5 overflow-hidden group hover:shadow-md transition-all duration-300">
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/3 aspect-video bg-stone-100 p-4 relative flex items-center justify-center border-b md:border-b-0 md:border-r border-stone-100">
-                        <div class="guilloche-bg absolute inset-0"></div>
-                        <i class="fa-solid fa-database text-brand-bi text-5xl opacity-40"></i>
-                        <span class="absolute bottom-4 text-[10px] text-stone-400 font-medium">Data Modeling</span>
+            <!-- 專案區塊下半部 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 專案 2 -->
+                <div class="bg-white rounded-2xl premium-shadow-sm border border-brand-accent/5 overflow-hidden hover:shadow-lg transition-all">
+                    <div class="aspect-video bg-stone-100 relative overflow-hidden">
+                        <img src="https://jkes48822789-cmyk.github.io/PowerBi/Image/PowerBi002.png" alt="倉儲庫存優化模型" class="w-full h-full object-cover">
                     </div>
-
-                    <div class="md:w-2/3 p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <span class="text-[10px] font-bold px-2.5 py-0.5 bg-brand-bi/10 text-stone-700 rounded-full">數據清洗</span>
-                            <span class="text-[11px] text-stone-400 font-mono">2026.03</span>
-                        </div>
-                        <h3 class="font-bold text-base mb-2 group-hover:text-brand-accent transition-colors">倉儲庫存優化模型</h3>
-                        <p class="text-xs text-stone-500 leading-relaxed mb-4">
-                            透過 Power Query 進行原始資料 ETL 清洗，建立星狀架構 (Star Schema) 模型，有效降低報表負載量並提升資料刷新效率。
-                        </p>
-                        
-                        <div class="flex flex-wrap gap-1.5 mb-4">
-                            <span class="text-[9px] bg-stone-50 border border-stone-100 text-stone-600 px-2 py-0.5 rounded">Power Query</span>
-                            <span class="text-[9px] bg-stone-50 border border-stone-100 text-stone-600 px-2 py-0.5 rounded">ETL Process</span>
-                            <span class="text-[9px] bg-stone-50 border border-stone-100 text-stone-600 px-2 py-0.5 rounded">Star Schema</span>
-                        </div>
-
-                        <a href="#" class="inline-flex items-center gap-1.5 text-xs text-brand-accent font-bold hover:underline">
-                            查看技術說明 <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                        </a>
+                    <div class="p-5">
+                        <h3 class="font-bold text-sm mb-1">倉儲庫存優化模型</h3>
+                        <p class="text-[11px] text-stone-500 mb-4">資料清洗與星狀模型建構分析。</p>
+                    </div>
+                </div>
+                <!-- 專案 3 -->
+                <div class="bg-white rounded-2xl premium-shadow-sm border border-brand-accent/5 overflow-hidden hover:shadow-lg transition-all">
+                    <div class="aspect-video bg-stone-100 relative overflow-hidden">
+                        <img src="https://jkes48822789-cmyk.github.io/PowerBi/Image/PowerBi003.png" alt="客戶行為分析" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-sm mb-1">客戶行為分析</h3>
+                        <p class="text-[11px] text-stone-500 mb-4">透過分群技術識別高價值客群行為。</p>
+                    </div>
+                </div>
+                <!-- 專案 4 -->
+                <div class="bg-white rounded-2xl premium-shadow-sm border border-brand-accent/5 overflow-hidden hover:shadow-lg transition-all">
+                    <div class="aspect-video bg-stone-100 relative overflow-hidden">
+                        <img src="https://jkes48822789-cmyk.github.io/PowerBi/Image/PowerBi004.png" alt="財務預測儀表板" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-sm mb-1">財務預測儀表板</h3>
+                        <p class="text-[11px] text-stone-500 mb-4">預測模型與風險矩陣呈現。</p>
                     </div>
                 </div>
             </div>
@@ -134,9 +112,8 @@
     </main>
 
     <footer class="bg-stone-900 text-stone-400 py-8 text-center mt-auto">
-        <div class="max-w-4xl mx-auto px-6 text-xs space-y-2">
-            <p class="text-stone-300">葉奇昌 ‧ Power BI 資料分析空間</p>
-            <p>© 2026 Yee Chi-Chang. 展示所有權歸原作者所有。</p>
+        <div class="max-w-4xl mx-auto px-6 text-xs">
+            <p>© 2026 Yee Chi-Chang. Power BI 資料分析空間</p>
         </div>
     </footer>
 </body>
